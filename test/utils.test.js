@@ -1,7 +1,5 @@
 // IMPORT MODULES under test here:
-// import { example } from '../example.js';
-
-import { renderAnimal } from '../utils.js';
+import { renderAnimal, renderDrinks } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -23,4 +21,13 @@ test('renderAnimal should return a <div> with dog info', (expect) => {
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.equal(actual.outerHTML, expected);
+});
+
+test('renderDrink should return a <li> that says coffee', (expect) => {
+    const expected = `<li class="drink">coffee</li>`;
+
+    const actual = renderDrinks('coffee');
+    // console.log(actual);
+    expect.deepEqual(actual.outerHTML, expected);
+    
 });

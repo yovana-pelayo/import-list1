@@ -20,3 +20,19 @@ export function renderDrinks(drink) {
     li.textContent = drink;
     return li;
 }
+export function renderPlayers(player) {
+    const div = document.createElement('div');
+    div.classList.add('player');
+    //created a div called players and a
+    const h2 = document.createElement('h2');
+    h2.textContent = player.type.toUpperCase();
+
+    const img = document.createElement('img');
+    img.src = `./assets/${player.image}`;
+
+    const p = document.createElement('p');
+    p.textContent = `${player.personal.age}`;
+
+    div.append(h2, img, p);
+    return div;
+}

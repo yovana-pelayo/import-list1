@@ -28,3 +28,5 @@ export const animals = [
         image: 'wombat.jpg',
     },
 ];
+
+///a list of simple objects

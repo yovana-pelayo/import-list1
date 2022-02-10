@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { renderAnimal, renderDrinks } from '../utils.js';
+import { renderAnimal, renderDrinks, renderPlayers } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -30,4 +30,27 @@ test('renderDrink should return a <li> that says coffee', (expect) => {
     // console.log(actual);
     expect.deepEqual(actual.outerHTML, expected);
     
+});
+test('renderPlayer should return a <div> with player info', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = `<div class="player"><h2>SELENE</h2><img src="./assets/selene.png"><p>30</p></div>`;
+
+    //Act
+    // Call the function you're testing and set the result to a const
+    const actual = renderPlayers({
+        id:2,
+        type: 'Selene',
+        class: 'player',
+        image: 'selene.png',
+        personal: {
+            home: 'Underworld',
+            age:'30',
+            power: 'Slaying Vampires',
+        }
+    });
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual.outerHTML, expected);
 });

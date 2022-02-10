@@ -36,3 +36,18 @@ export function renderPlayers(player) {
     div.append(h2, img, p);
     return div;
 }
+export function renderFilms(film) {
+    const div = document.createElement('div');
+    div.classList.add('film');
+
+    const h2 = document.createElement('h2');
+    h2.textContent = film.title.toUpperCase();
+
+    const h3 = document.createElement('h3');
+    h3.textContent = `The following reviews are out of 10! Most recent reviews are   ${film.ratingsOutOfTen['2']}`;
+    // const p = document.createElement('p');
+    // p.textContent = `The following reviews are out of 10 ${film.ratingOutOfTen}`;
+
+    div.append(h2, h3);
+    return div;
+}

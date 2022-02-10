@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { renderAnimal, renderDrinks, renderPlayers } from '../utils.js';
+import { renderAnimal, renderDrinks, renderPlayers, renderFilms } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -48,6 +48,25 @@ test('renderPlayer should return a <div> with player info', (expect) => {
             age:'30',
             power: 'Slaying Vampires',
         }
+    });
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual.outerHTML, expected);
+});
+test('renderfilms should return a <div> with player info', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = `<div class="film"><h2>MATRIX RELOADED</h2><h3>The following reviews are out of 10! Most recent reviews are   9</h3></div>`;
+
+    //Act
+    // Call the function you're testing and set the result to a const
+    const actual = renderFilms({
+        title: 'Matrix Reloaded',
+        genre: 'Sci-fi',
+        cost: '$6',
+        ratingsOutOfTen: ['10', '10', '9', '9', '10', '9'],
+
     });
 
     //Expect

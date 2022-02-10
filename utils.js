@@ -44,7 +44,7 @@ export function renderFilms(film) {
     h2.textContent = film.title.toUpperCase();
 
     const h3 = document.createElement('h3');
-    h3.textContent = `The following reviews are out of 10! Most recent reviews are   ${film.ratingsOutOfTen['2']}`;
+    h3.textContent = `The following reviews are out of 10! Most recent reviews are   ${film.ratingsOutOfTen}`;
     // const p = document.createElement('p');
     // p.textContent = `The following reviews are out of 10 ${film.ratingOutOfTen}`;
 

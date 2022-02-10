@@ -57,7 +57,7 @@ test('renderPlayer should return a <div> with player info', (expect) => {
 test('renderfilms should return a <div> with player info', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = `<div class="film"><h2>MATRIX RELOADED</h2><h3>The following reviews are out of 10! Most recent reviews are   9</h3></div>`;
+    const expected = `<div class="film"><h2>MATRIX RELOADED</h2><h3>The following reviews are out of 10! Most recent reviews are   10,10,9,9,10,9</h3></div>`;
 
     //Act
     // Call the function you're testing and set the result to a const
